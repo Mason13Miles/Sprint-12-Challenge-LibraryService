@@ -19,20 +19,17 @@ import java.util.List;
 @Component
 public class SeedData implements CommandLineRunner {
 
+    @Autowired
     private LibraryService libraryService;
 
+    @Autowired
     private PatronService patronService;
 
+    @Autowired
     private LibraryCardService libraryCardService;
 
+    @Autowired
     private CheckableService checkableService;
-
-    public SeedData(LibraryService libraryService, PatronService patronService, LibraryCardService libraryCardService, CheckableService checkableService) {
-        this.libraryService = libraryService;
-        this.patronService = patronService;
-        this.libraryCardService = libraryCardService;
-        this.checkableService = checkableService;
-    }
 
     @Override
     public void run(String... args) {
